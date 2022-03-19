@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/1.8.0.202-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.AuthController">
+    <padding>
+        <Insets right="15" left="15"/>
+    </padding>
+    <HBox>
+        <padding>
+            <Insets bottom="10" top="10" />
+        </padding>
+        <Label prefWidth="90" text="Логин: "/>
+        <TextField fx:id="loginTF" />
+    </HBox>
+    <HBox>
+        <Label prefWidth="90" text="Пароль: "/>
+        <PasswordField fx:id="passTF"/>
+    </HBox>
+    <HBox>
+        <padding>
+            <Insets top="10" bottom="10"/>
+        </padding>
+        <Label fx:id="infoLbl" text=" "/>
+    </HBox>
+    <HBox spacing="10">
+        <padding>
+            <Insets bottom="15"/>
+        </padding>
+        <Button prefWidth="100" fx:id="enterBtn" onAction="#sendAuthMessage" text="Войти" />
+        <Button fx:id="regBtn" text="Зарегистрироваться" onAction="#showRegForm" />
+    </HBox>
+</VBox>
